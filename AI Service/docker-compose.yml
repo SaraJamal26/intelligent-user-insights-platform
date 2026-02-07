@@ -1,0 +1,40 @@
+services:
+  ai-service:
+    build:
+      context: ./ai-service
+    environment:
+      - PORT=3001
+      - AI_PROVIDER=ollama
+      - OLLAMA_URL=http://host.docker.internal:11434
+      - OLLAMA_MODEL=llama3
+      - MOCK_AI=false
+    ports:
+      - "3001:3001"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3001/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  user-service:
+    build:
+      context: .
+      dockerfile: UserWindowsService/Dockerfile
+    environment:
+      - ASPNETCORE_URLS=http://+:8080
+      - AiService__BaseUrl=http://ai-service:3001
+    ports:
+      - "8080:8080"
+    depends_on:
+      ai-service:
+        condition: service_healthy
+    volumes:
+      - user_data:/app/Data
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  user_data:

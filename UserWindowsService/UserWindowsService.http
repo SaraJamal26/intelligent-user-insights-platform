@@ -1,0 +1,6 @@
+@UserWindowsService_HostAddress = http://localhost:5134
+
+GET {{UserWindowsService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

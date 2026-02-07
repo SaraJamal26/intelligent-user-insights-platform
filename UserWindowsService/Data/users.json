@@ -1,0 +1,30 @@
+[
+  {
+    "Id": "d77a2c47-72fb-44a3-9171-ff898e70b299",
+    "FirstName": "Ali",
+    "LastName": "Khan",
+    "Email": "ali@example.com",
+    "Notes": "Support was fast but the app crashes sometimes. Overall satisfied.",
+    "CreatedAt": "2026-01-27T22:55:32.9651701Z",
+    "SentimentScore": 0,
+    "Tags": [],
+    "LastAnalyzedAt": "2026-01-27T22:56:40.0696712Z",
+    "EngagementLevel": "Medium"
+  },
+  {
+    "Id": "e46f96ec-c372-41ba-8e87-36e0d0eaa3a3",
+    "FirstName": "Sara",
+    "LastName": "Jamal",
+    "Email": "sara.jamal@test.com",
+    "Notes": "The support was quick, but the app UI feels confusing. Overall okay.",
+    "CreatedAt": "2026-02-07T13:00:29.6626125Z",
+    "SentimentScore": 0.2,
+    "Tags": [
+      "Tech Issues",
+      "App UI",
+      "Customer Support"
+    ],
+    "LastAnalyzedAt": "2026-02-07T13:17:50.0922594Z",
+    "EngagementLevel": "Medium"
+  }
+]
