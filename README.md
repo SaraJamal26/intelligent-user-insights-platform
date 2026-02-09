@@ -67,5 +67,19 @@ Run the service:
 dotnet run
 ```
 
-
 Or run from Visual Studio (F5).
+
+## Run with Docker
+
+### From the repository root:
+```bash
+
+docker compose up --build
+```
+
+
+### Services will be available at:
+
+.NET API: http://localhost:8080
+
+Node AI: http://localhost:3001
