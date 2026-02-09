@@ -4,3 +4,11 @@ obj/
 *.user
 *.suo
 *.log
+.env
+.env.*
+**/bin/
+**/obj/
+**/out/
+**/node_modules/
+npm-debug.log*
+**/.dockerignore
